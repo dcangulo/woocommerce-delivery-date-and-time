@@ -1,0 +1,29 @@
+.flatpickr-month,
+.flatpickr-weekday,
+.flatpickr-weekdays  {
+  background: #ff0028 !important;
+}
+
+.flatpickr-weekday {
+  color: #ffffff !important;
+}
+
+.flatpickr-day.selected {
+  background: #ff0028 !important;
+  border-color: #ff0028 !important;
+  color: #ffffff !important;
+}
+
+.flatpickr-day.today {
+  border-color: #ff0028 !important;
+}
+
+.flatpickr-current-month .cur-month,
+.flatpickr-current-month .cur-year {
+  color: #ffffff !important;
+}
+
+.flatpickr-prev-month svg,
+.flatpickr-next-month svg {
+  fill: #ffffff !important;
+}
