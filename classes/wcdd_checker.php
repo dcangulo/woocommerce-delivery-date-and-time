@@ -17,7 +17,7 @@ class WcddChecker {
 
   public function wcdd_woocommerce_disabled_message() {
     $class = 'notice notice-error';
-    $message = __('WooCommerce Delivery Date and Time plugin requires WooCommerce installed and activate.', 'order-delivery-date' );
+    $message = __('WooCommerce Delivery Date and Time plugin requires WooCommerce installed and activate.');
 
     printf('<div class="%1$s"><p>%2$s</p></div>', $class, $message);
   }
