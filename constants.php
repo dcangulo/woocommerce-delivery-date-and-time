@@ -1,6 +1,7 @@
 <?php
 define('WCDD_PLUGIN_ROOT_URL', plugins_url('woocommerce-delivery-date-and-time'));
 define('WCDD_PLUGIN_INDEX_PATH', join('/', [WP_PLUGIN_DIR, 'woocommerce-delivery-date-and-time', 'index.php']));
+define('WCDD_DATETIME_FORMAT', join(' ', [get_option('date_format'), get_option('time_format')]));
 define('WCDD_SETTINGS', [
   'preparation_days' => empty(get_option('wcdd_preparation_days')) ? 0 : get_option('wcdd_preparation_days'),
   'disabled_dates' => explode(', ', get_option('wcdd_disabled_dates')),

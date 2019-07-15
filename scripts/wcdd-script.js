@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   flatpickr('.wcdd-date-time-field', {
     enableTime: true,
-    dateFormat: 'F j, Y h:i K',
+    dateFormat: 'Y-m-d H:i:S',
+    altInput: true,
+    altFormat: 'F j, Y h:i K',
     disableMobile: true,
     minDate: validDate,
     disable: wcdd.settings.disabled_dates,

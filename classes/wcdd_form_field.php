@@ -35,16 +35,19 @@ class WcddFormField {
   }
 
   public function wcdd_display_on_admin_edit($order){
+    $date = date_create($order->get_meta('delivery_date'));
+
     echo '
       <p>
         <strong>' . __('Delivery Date') . ':</strong>
-        <br>' . get_post_meta($order->get_id(), 'delivery_date', true) .
+        <br>' . date_format($date, WCDD_DATETIME_FORMAT) .
       '</p>
     ';
   }
 
   public function wcdd_get_order_preview_data($data, $order) {
-    $data['delivery_date'] = $order->get_meta('delivery_date');
+    $date = date_create($order->get_meta('delivery_date'));
+    $data['delivery_date'] = date_format($date, WCDD_DATETIME_FORMAT);
 
     return $data;
   }
@@ -59,11 +62,15 @@ class WcddFormField {
   }
 
   public function wcdd_display_on_client_view_order($order) {
-    echo '<h2>Delivery Date</h2>' . get_post_meta($order->get_id(), 'delivery_date', true);
+    $date = date_create($order->get_meta('delivery_date'));
+
+    echo '<h2>Delivery Date</h2>' . date_format($date, WCDD_DATETIME_FORMAT);
   }
 
   public function wcdd_display_on_email($order) {
-    echo '<h2>Delivery Date</h2>' . get_post_meta($order->get_id(), 'delivery_date', true) . '<br><br>';
+    $date = date_create($order->get_meta('delivery_date'));
+
+    echo '<h2>Delivery Date</h2>' . date_format($date, WCDD_DATETIME_FORMAT) . '<br><br>';
   }
 
 }
